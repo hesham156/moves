@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="time watch">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/bootstrap.css" />
+  <link rel="stylesheet" href="./css/all.css" />
+  <link rel="stylesheet" href="./css/index.css" />
+  <script src="https://kit.fontawesome.com/f70731dcf2.js" crossorigin="anonymous"></script>
+  <script src="./js/index.js"></script>
+</head>
+
+<body>
+  <!-- side -->
+  <aside id="side" class="side-bar">
+    <div class="container">
+      <div id="icon" class="icon" onclick="show()">|||</div>
+
+      <div class="logo center">
+        <h2><span>You</span>.time</h2>
+      </div>
+      <div onclick="show()" class="menu">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#Home"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="#Favorite"><i class="fas fa-crown"></i>Favorite</a></li>
+          <li><a href="#Putchese"><i class="fas fa-shopping-cart"></i>Putchese</a></li>
+          <li><a href="#Rerrunder"><i class="fas fa-bell"></i>Rerrunder</a></li>
+        </ul>
+      </div>
+      <div onclick="show()" class="other">
+        <h4>Other</h4>
+        <ul>
+          <li><a href="#Playlist"><i class="fas fa-list"></i>Playlist</a></li>
+          <li><a href="#Live"><i class="fas fa-wifi"></i>Live</a></li>
+          <li><a href="#Bookmarks"><i class="fas fa-bookmark"></i>Bookmarks</a></li>
+          <li><a href="#Setting"><i class="fas fa-cog"></i>Setting</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+  <!-- body -->
+  <div class="main vh-100">
+
+
+
+
+
+    <div id="Home">
+      <header>
+        <div class="container h-100 center">
+          <div class="srch w-50">
+            <input type="text" placeholder="search" />
+            <button><i class="fas fa-search"></i></button>
+          </div>
+          <div class="user w-50">
+            <ul onclick="notf()">
+              <li class="center">
+                <div class="img">
+                </div>
+                <div class="name">
+                  <h5>Hesham Ahmed</h5>
+                </div>
+              </li>
+              <li class="center" onclick="notf('msg')">
+                <i class="fas fa-paper-plane"></i>
+                <div class="notf center msg" id="msg" style="height: 0px;">
+                  no massage
+                </div>
+
+              </li>
+              <li class="center" onclick="notf('notf')">
+                <i class="fas fa-bell"></i>
+                <div class="notf center" id="notf" style="height: 0px;">
+                  no notfiction
+
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="bar">
+          <ul class="center">
+            <li><a href="#Netflix">Netflix</a></li>
+            <li><a href="#Shahid">Shahid</a></li>
+            <li><a href="#EgyBest">EgyBest</a></li>
+            <li><a href="#CinemaForYou">CinemaForYou</a></li>
+            <li><a href="#Moves">Moves</a></li>
+            <li><a href="#HBO">HBO</a></li>
+          </ul>
+        </div>
+        <hr />
+
+
+      </header>
+      <div class="container p-r">
+        <main id="overl">
+          <div id="sh" class="overl">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+
+
+        </main>
+        <div class="putt">
+          <button id="m" class="center" onclick="scp('-')">
+            <h1>
+              < </h1>
+          </button>
+          <button id="p" class="center" onclick="scp('+')">
+            <h1> > </h1>
+          </button>
+        </div>
+      </div>
+      <div class="container justify-content-start center  fsl">
+        <div id="bgimg" class="bg-img"></div>
+        <div id="info" class="info">
+        </div>
+      </div>
+    </div>
+
+    <div id="Favorite" class="Favorite vh-100"></div>
+    <div id="Putchese" class="putchese vh-100"></div>
+    <div id="Rerrunder" class="rerrunder vh-100"></div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+  <!-- notfiction -->
+  <script src="./js/bootstrap.js"></script>
+</body>
+
+</html>
