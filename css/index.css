@@ -176,7 +176,7 @@ header hr {
   position: relative;
 }
 .bar ul {
-  flex-wrap: wrap;
+  overflow: scroll;
 }
 .bar ul li {
   padding: 0px;
@@ -332,5 +332,9 @@ main {
   .info {
     height: 50%;
     width: 100%;
+  }
+  .bar ul {
+    padding-left: 10px;
+    justify-content: start !important;
   }
 }
