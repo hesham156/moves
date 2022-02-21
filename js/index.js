@@ -84,27 +84,7 @@ onhashchange = ()=>{
 
     chan(0,8,'active')
     chan(11,17,'act')
-    const card = JSON.parse(localStorage.getItem(0))
-const Putchese = document.getElementById('Putchese');
-card?Putchese.innerHTML =`
-<div>
-      <h2> ${card?.name}</h2>
-    <br>
-       ${card?.describtion}
-     <br>
-    <span> Creators : </span>
-       ${card?.creators}
-    <br>
-     <span> Stars : </span>
-      ${card?.stars} 
-    <br>
-    <span> Rate : </span>
-      ${card?.rate}
-    <i class="fas fa-star"></i>
-</div>
-`:Putchese.innerHTML=`<div></div>`
-
-
+   
 
 
 
@@ -149,7 +129,10 @@ const chbg = (i)=>{
               ${data[i].rate}
             <i class="fas fa-star"></i>
         </div>
-        <div> <button onclick="card(${i})"><i class="fas fa-shopping-cart"></i></button></div>
+        <div>
+         <button onclick="card(${i})"><i class="fas fa-shopping-cart"></i></button>
+         <button><i class="fas fa-heart"></i></button>
+         </div>
         `
 
         bgimg.style.backgroundImage=`url(${data[i].img})`
@@ -174,5 +157,29 @@ chbg(0)
 document.location.hash='Home'
 }
 const card = (i)=>{
- localStorage.setItem(i,JSON.stringify(data[i]))
+    if(localStorage.getItem(i)===null){
+ localStorage.setItem(i,i)
+ const card = localStorage.getItem(0)
+ const Putchese = document.getElementById('Putchese');
+ card?Putchese.innerHTML =`
+ <div>
+       <h2> ${data[card]?.name}</h2>
+     <br>
+        ${card?.describtion}
+      <br>
+     <span> Creators : </span>
+        ${data[card]?.creators}
+     <br>
+      <span> Stars : </span>
+       ${data[card]?.stars} 
+     <br>
+     <span> Rate : </span>
+       ${data[card]?.rate}
+     <i class="fas fa-star"></i>
+ </div>
+ `:Putchese.innerHTML=`<div></div>`
+ 
+    }else{
+        alert('exiest')
+    }
 }
