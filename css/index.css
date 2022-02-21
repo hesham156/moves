@@ -264,6 +264,26 @@ main {
   margin-left: 20px;
   text-align: center;
 }
+.info span {
+  color: aqua;
+  font-size: 19px;
+}
+.info div:first-child i {
+  color: yellow;
+  margin: 5px;
+}
+.info div:last-child {
+  padding: 10px;
+}
+.info div:last-child button {
+  padding: 7px;
+  width: 60px;
+  color: aqua;
+  background: none;
+  outline: none;
+  border-radius: 7px;
+  border: 1px solid aqua;
+}
 
 /* media */
 @media only screen and (max-width: 800px) {
@@ -334,7 +354,7 @@ main {
     width: 100%;
   }
   .bar ul {
-    padding-left: 10px;
+    padding-left: 0px;
     justify-content: start !important;
   }
 }

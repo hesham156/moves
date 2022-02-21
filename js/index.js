@@ -1,38 +1,43 @@
 var data = [
     {
         name:'Game of Thrones',
+        img :'./img/0.jpg',
         describtion:'Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.',
         creators:'David Benioff - D.B. Weiss',
         stars:'Emilia Clarke - Peter Dinklage - Kit Harington',
-        rate:'9.2/10',
+        rate:'9.2',
     },
     {
         name:'La casa de papel',
+        img :'./img/1.jpg',
         describtion:'An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.',
         creators:'Álex Pina',
         stars:'Úrsula Corberó - Álvaro Morte - Itziar Ituño',
-        rate:'8.2/10'
+        rate:'8.2'
     },
     {
         name:'Vikings',
+        img :'./img/2.jpg',
         describtion:'Vikings transports us to the brutal and mysterious world of Ragnar Lothbrok, a Viking warrior and farmer who yearns to explore - and raid - the distant shores across the ocean.',
         creators:'Michael Hirst',
         stars:'Katheryn Winnick - Gustaf Skarsgård - Alexander Ludwig',
-        rate:'8.5/10'
+        rate:'8.5'
     },
     {
         name:'Breaking Bad',
+        img :'./img/3.jpg',
         describtion:'A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family\'s future.',
         creators:'Vince Gilligan',
         stars:'Bryan Cranston - Aaron Paul - Anna Gunn',
-        rate:'9.4/10'
+        rate:'9.4'
     },
     {
         name:'Squid Game',
+        img :'./img/4.jpg',
         describtion:'Hundreds of cash-strapped players accept a strange invitation to compete in children\'s games. Inside, a tempting prize awaits with deadly high stakes . A survival game that has a whopping 45.6 billion-won prize at stake.',
         creators:'',
         stars:'Lee Jung-jae - Park Hae-soo - Masoud Sepahi',
-        rate:'8.0/10',
+        rate:'8.0',
     },
 ]
 
@@ -79,6 +84,28 @@ onhashchange = ()=>{
 
     chan(0,8,'active')
     chan(11,17,'act')
+    const card = JSON.parse(localStorage.getItem(0))
+const Putchese = document.getElementById('Putchese');
+card?Putchese.innerHTML =`
+<div>
+      <h2> ${card?.name}</h2>
+    <br>
+       ${card?.describtion}
+     <br>
+    <span> Creators : </span>
+       ${card?.creators}
+    <br>
+     <span> Stars : </span>
+      ${card?.stars} 
+    <br>
+    <span> Rate : </span>
+      ${card?.rate}
+    <i class="fas fa-star"></i>
+</div>
+`:Putchese.innerHTML=`<div></div>`
+
+
+
 
 
 }
@@ -106,12 +133,26 @@ m.scroll({
 const chbg = (i)=>{
         const bgimg = document.getElementById('bgimg');
         const info = document.getElementById('info');
-        info.innerHTML ='<div>'
-         + '<h2>'+ data[i].name +'</h2>'+'<br>'
-         + data[i].describtion + '<br>'  +
-         data[i].creators + '<br>'  + data[i].stars + '<br>' + data[i].rate + '</div>'
+        info.innerHTML =`
+        <div>
+              <h2> ${data[i].name}</h2>
+            <br>
+               ${data[i].describtion}
+             <br>
+            <span> Creators : </span>
+               ${data[i].creators}
+            <br>
+             <span> Stars : </span>
+              ${data[i].stars} 
+            <br>
+            <span> Rate : </span>
+              ${data[i].rate}
+            <i class="fas fa-star"></i>
+        </div>
+        <div> <button onclick="card(${i})"><i class="fas fa-shopping-cart"></i></button></div>
+        `
 
-        bgimg.style.backgroundImage="url('./img/"+i+".jpg')"
+        bgimg.style.backgroundImage=`url(${data[i].img})`
         var c =document.getElementById('sh').children;
         for(let x = 0;x<c.length;x++){
             c[x].classList.remove('actimg')
@@ -131,5 +172,7 @@ chan(0,8,'active')
 chan(11,17,'act')
 chbg(0)
 document.location.hash='Home'
-
+}
+const card = (i)=>{
+ localStorage.setItem(i,JSON.stringify(data[i]))
 }
