@@ -190,7 +190,7 @@ header hr {
   color: #1a1c3a;
 }
 main {
-  overflow: hidden;
+  overflow: scroll;
   height: 220px;
 }
 .overl {
