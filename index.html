@@ -24,8 +24,8 @@
         <h2><span>You</span>.time</h2>
       </div>
       <div onclick="show()" class="menu">
-        <h4>Menu</h4>
-        <ul>
+        <h4 onclick="sw('menu','row1')">Menu <i id="row1" class="fas fa-caret-down"></i></h4>
+        <ul id="menu">
           <li><a href="#Home"><i class="fas fa-home"></i>Home</a></li>
           <li><a href="#Favorite"><i class="fas fa-crown"></i>Favorite</a></li>
           <li><a href="#Putchese"><i class="fas fa-shopping-cart"></i>Putchese</a></li>
@@ -33,8 +33,8 @@
         </ul>
       </div>
       <div onclick="show()" class="other">
-        <h4>Other</h4>
-        <ul>
+        <h4 onclick="sw('other','row2')">Other <i id="row2" class="fas fa-caret-down"></i></h4>
+        <ul id="other">
           <li><a href="#Playlist"><i class="fas fa-list"></i>Playlist</a></li>
           <li><a href="#Live"><i class="fas fa-wifi"></i>Live</a></li>
           <li><a href="#Bookmarks"><i class="fas fa-bookmark"></i>Bookmarks</a></li>
@@ -128,9 +128,17 @@
       </div>
     </div>
 
-    <div id="Favorite" class="Favorite vh-100"></div>
-    <div id="Putchese" class="putchese vh-100"></div>
-    <div id="Rerrunder" class="rerrunder vh-100"></div>
+    <div id="Favorite" class="container Favorite vh-100 center align-items-start">
+      <h2>Favorit</h2>
+    </div>
+    <div class="container putchese vh-100 flex-column center align-items-start">
+      <div class="w-100 text-center">
+        <h2>Card</h2>
+      </div>
+
+      <div id="Putchese" class="center flex-wrap"></div>
+    </div>
+    <div id="Rerrunder" class="container rerrunder vh-100 center align-items-start"></div>
 
 
 

@@ -9,6 +9,53 @@ body {
 ul {
   list-style: none;
 }
+.cardd {
+  background-repeat: no-repeat;
+  display: inline-block;
+  background-size: cover;
+  margin: 5px;
+  border-radius: 7px;
+}
+.face {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  transition: 0.3s;
+  text-align: center;
+}
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  margin: 10px;
+  transform-origin: center;
+}
+.bake {
+  transform: rotateY(180deg);
+  background-color: aliceblue;
+  color: #1a1c3a;
+}
+.box:hover {
+  transform: rotateY(-180deg);
+}
+#Putchese {
+  perspective: 600px;
+}
+#other,
+#menu {
+  height: 0px;
+  transition: 0.3s;
+  overflow: hidden;
+}
+#row1,
+#row2 {
+  transition: 0.3s;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -363,5 +410,9 @@ main {
   .bar ul {
     padding-left: 0px;
     justify-content: start !important;
+  }
+  #other,
+  #menu {
+    height: 238px !important;
   }
 }

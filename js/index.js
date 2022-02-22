@@ -40,8 +40,6 @@ var data = [
         rate:'8.0',
     },
 ]
-
-
 var lim =document.getElementsByTagName('li');
 const show = ()=>{
     const side = document.getElementById('side');
@@ -57,50 +55,33 @@ const notf = (cls)=>{
        if(cls === "msg"){
         document.getElementById("notf").style.height="0px"
         document.getElementById("notf").style.border="0px"
-
        }else{
         document.getElementById("msg").style.height="0px"
         document.getElementById("msg").style.border="0px"
-
        }
-       
-
     }else{
         notf.style.height="0px"
         notf.style.border = "0px"
-
     }
-
 }
 const chan = (fromn,ton,clas)=>{
     for(let i = fromn; i<ton;i++){
         var ur = document.location.hash.replace('#','')
-
         ur === lim[i].textContent?lim[i].classList.add(clas):lim[i].classList.remove(clas)
-
-    }
-}
+    }}
 onhashchange = ()=>{
-
     chan(0,8,'active')
     chan(11,17,'act')
-   
-
-
-
 }
-   
-
 const scp = (z)=>{
     var m = document.getElementById('overl');
     var left = m.scrollLeft ;
     switch (z){
         case '+':
-            left =  left+200;
-            
+            left =  left+200;        
          break;
         case '-':
-            left = left-200;
+            left = left-200;    
           break;
         default:
             left = m.scrollLeft;
@@ -109,7 +90,6 @@ m.scroll({
     left : left,
   behavior: 'smooth'
 })}
-
 const chbg = (i)=>{
         const bgimg = document.getElementById('bgimg');
         const info = document.getElementById('info');
@@ -132,19 +112,14 @@ const chbg = (i)=>{
         <div>
          <button onclick="card(${i})"><i class="fas fa-shopping-cart"></i></button>
          <button><i class="fas fa-heart"></i></button>
-         </div>
-        `
-
+         </div>`
         bgimg.style.backgroundImage=`url(${data[i].img})`
         var c =document.getElementById('sh').children;
         for(let x = 0;x<c.length;x++){
-            c[x].classList.remove('actimg')
-            
+            c[x].classList.remove('actimg')   
         }
         c[i].classList.add('actimg')
-
     }
-
 onload = ()=>{
 var c =document.getElementById('sh').children;
 for(let i =0;i<c.length;i++){
@@ -154,32 +129,60 @@ for(let i =0;i<c.length;i++){
 chan(0,8,'active')
 chan(11,17,'act')
 chbg(0)
+showdata()
 document.location.hash='Home'
 }
 const card = (i)=>{
     if(localStorage.getItem(i)===null){
- localStorage.setItem(i,i)
- const card = localStorage.getItem(0)
- const Putchese = document.getElementById('Putchese');
- card?Putchese.innerHTML =`
- <div>
-       <h2> ${data[card]?.name}</h2>
-     <br>
-        ${card?.describtion}
-      <br>
-     <span> Creators : </span>
-        ${data[card]?.creators}
-     <br>
-      <span> Stars : </span>
-       ${data[card]?.stars} 
-     <br>
-     <span> Rate : </span>
-       ${data[card]?.rate}
-     <i class="fas fa-star"></i>
- </div>
- `:Putchese.innerHTML=`<div></div>`
- 
-    }else{
-        alert('exiest')
+    localStorage.setItem(i,i)
+    window.location.reload()
+   }
+}
+const showdata = ()=>{
+    const Putchese = document.getElementById('Putchese');
+
+    for(let nn = 0 ; nn<data.length;nn++){
+        if(localStorage.getItem(nn)!==null){
+        var nump = JSON.parse(localStorage.getItem(nn))
+        const div =   document.createElement('div')
+        const div1 =   document.createElement('div')
+        const box =   document.createElement('div')
+
+
+        div.classList.add('cardd','face')
+        div1.classList.add('face','bake')
+        box.classList.add('box')
+        div1.innerHTML=`<div><h4>${data[nump]?data[nump].name:' ' }</h4>
+        <p>
+        ${data[nump]?data[nump].rate:' ' }
+        <i class="fas fa-star"></i>
+        </p> </div>
+        <div><button onclick="remo(${nump})">remove</button></div>
+        `
+
+        div.style.backgroundImage = `url(${data[nump]?data[nump].img:''})`
+        box.appendChild(div); 
+        box.appendChild(div1); 
+        Putchese.appendChild(box); 
+
+       }   }
+}
+const remo = (idd)=>{
+    localStorage.removeItem(idd)
+    window.location.reload();
+}
+const sw = (idd ,ro) =>{
+    var v = document.getElementById(idd);
+    var r =document.getElementById(ro);
+    if(v.style.height===''||v.style.height==='0px'){
+        v.style.height="238px";
+        v.style.overflow='hidden'
+        r.style.transform="rotate(-90deg)"
     }
+    else if(v.style.height='238px') {
+      v.style.height='0px'
+      r.style.transform = "rotate(0deg)"
+
+    }
+  
 }
