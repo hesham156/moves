@@ -39,6 +39,22 @@ var data = [
         stars:'Lee Jung-jae - Park Hae-soo - Masoud Sepahi',
         rate:'8.0',
     },
+    {
+        name:'The Blacklist',
+        img :'./img/5.jpg',
+        describtion:'A new FBI profiler, Elizabeth Keen, has her entire life uprooted when a mysterious criminal, Raymond Reddington, who has eluded capture for decades, turns himself in and insists on speaking only to her.',
+        creators:'Jon Bokenkamp',
+        stars:'James Spader - Megan Boone - Diego Klattenhoff',
+        rate:'8.0',
+    },
+    {
+        name:'The Walking Dead',
+        img :'./img/6.jpg',
+        describtion:'Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive.',
+        creators:'Frank Darabont',
+        stars:'Andrew Lincoln - Norman Reedus - Melissa McBride',
+        rate:'8.1',
+    }
 ]
 var lim =document.getElementsByTagName('li');
 const show = ()=>{
