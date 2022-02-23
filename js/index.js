@@ -209,15 +209,17 @@ const foot = ()=>{
     const footer = document.getElementById('footer')
     const btn = document.getElementById('btn-f')
 
+
     if(footer.style.height===''||footer.style.height==='0px'){
         footer.style.height='300px'
         btn.style.bottom='300px'
         btn.style.transform="rotate(180deg)"
+      window.scroll(0,2529)
 
     }else if(footer.style.height==='300px'){
         footer.style.height='0px';
         btn.style.bottom='0px'
         btn.style.transform="rotate(0deg)"
-
+        window.scroll(0,2228)
     }
 }

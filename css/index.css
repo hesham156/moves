@@ -9,24 +9,19 @@ body {
 ul {
   list-style: none;
 }
-footer {
-  height: 0px;
-  z-index: 11111;
-  background: #1a1c3a;
-  overflow: hidden;
+#footer {
   transition: 0.3s;
-  position: fixed;
-  bottom: 0;
+  background-color: #1a1c3a;
 }
 
 .ytp-title-channel-logo {
   display: none !important;
 }
 #btn-f {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   transition: 0.3s;
-  left: 60%;
+  left: 50%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -283,6 +278,7 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .putt button {
   width: 50px;
   background: #212755;
