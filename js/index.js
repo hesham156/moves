@@ -54,7 +54,7 @@ var data = [
         creators:'Frank Darabont',
         stars:'Andrew Lincoln - Norman Reedus - Melissa McBride',
         rate:'8.1',
-    }
+    },
 ]
 var lim =document.getElementsByTagName('li');
 const show = ()=>{
@@ -155,8 +155,8 @@ const card = (i)=>{
    }
 }
 const showdata = ()=>{
-    const Putchese = document.getElementById('Putchese');
-
+    const Putchese = document.getElementById('Card');
+    if(localStorage.length!==0){
     for(let nn = 0 ; nn<data.length;nn++){
         if(localStorage.getItem(nn)!==null){
         var nump = JSON.parse(localStorage.getItem(nn))
@@ -181,7 +181,10 @@ const showdata = ()=>{
         box.appendChild(div1); 
         Putchese.appendChild(box); 
 
-       }   }
+       }
+       }}else{
+           Putchese.innerHTML='<div class="w-100 text-center">card is impty</div>'
+       }
 }
 const remo = (idd)=>{
     localStorage.removeItem(idd)
@@ -201,4 +204,20 @@ const sw = (idd ,ro) =>{
 
     }
   
+}
+const foot = ()=>{
+    const footer = document.getElementById('footer')
+    const btn = document.getElementById('btn-f')
+
+    if(footer.style.height===''||footer.style.height==='0px'){
+        footer.style.height='300px'
+        btn.style.bottom='300px'
+        btn.style.transform="rotate(180deg)"
+
+    }else if(footer.style.height==='300px'){
+        footer.style.height='0px';
+        btn.style.bottom='0px'
+        btn.style.transform="rotate(0deg)"
+
+    }
 }

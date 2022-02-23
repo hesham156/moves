@@ -27,8 +27,8 @@
         <h4 onclick="sw('menu','row1')">Menu <i id="row1" class="fas fa-caret-down"></i></h4>
         <ul id="menu">
           <li><a href="#Home"><i class="fas fa-home"></i>Home</a></li>
-          <li><a href="#Favorite"><i class="fas fa-crown"></i>Favorite</a></li>
-          <li><a href="#Putchese"><i class="fas fa-shopping-cart"></i>Putchese</a></li>
+          <li><a href="#Scenes"><i class="fas fa-desktop"></i>Scenes</a></li>
+          <li><a href="#Card"><i class="fas fa-shopping-cart"></i>Card</a></li>
           <li><a href="#Rerrunder"><i class="fas fa-bell"></i>Rerrunder</a></li>
         </ul>
       </div>
@@ -130,17 +130,58 @@
       </div>
     </div>
 
-    <div id="Favorite" class="container Favorite vh-100 center align-items-start">
-      <h2>Favorit</h2>
+    <div id="Scenes" class="container h-auto flex-column Scenes center align-items-start">
+      <div class="w-100 p-5 text-center">
+        <h2>Scenes</h2>
+      </div>
+      <div class="w-100 flex-wrap flex-row center">
+        <div class="center">
+          <iframe width="350" height="400" src="https://www.youtube.com/embed/AaLoOzI26YA" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="center">
+          <iframe width="350" height="400" src="https://www.youtube.com/embed/bRrK8h6R4hI" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="center">
+          <iframe width="350" height="400" src="https://www.youtube.com/embed/tWuPu3GL2jY" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="center">
+          <iframe width="350" height="400" src="https://www.youtube.com/embed/jj35CalTYeE" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="center">
+          <iframe width="350" height="400" src="https://www.youtube.com/embed/Ed4WezawtgM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+        <div class="center">
+          <iframe width="350" height="400" src="https://www.youtube.com/embed/sH4Y450PSVM" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
     </div>
-    <div class="container putchese vh-100 flex-column center align-items-start">
-      <div class="w-100 text-center">
+
+
+    <div class="container putchese  h-auto flex-column center align-items-start">
+      <div class="w-100 p-5 text-center">
         <h2>Card</h2>
       </div>
 
-      <div id="Putchese" class="center flex-wrap"></div>
+      <div id="Card" class="center w-100 flex-wrap"></div>
     </div>
-    <div id="Rerrunder" class="container rerrunder vh-100 center align-items-start"></div>
 
 
 
@@ -149,9 +190,23 @@
 
 
 
-
-
+    <button id="btn-f" onclick="foot()"><i class="fas fa-caret-down" aria-hidden="true"></i></button>
+    <footer class="flex-column center w-100" id="footer">
+      <div class="container">
+        <div class="w-100 h-75 center">
+          <ul>
+            <li>Facebook</li>
+            <li>Linked in</li>
+            <li>Git hup</li>
+          </ul>
+        </div>
+        <div class="w-100 h-25 center">
+          by Hesham Ahmed
+        </div>
+      </div>
+    </footer>
   </div>
+
 
   <!-- notfiction -->
   <script src="./js/bootstrap.js"></script>
