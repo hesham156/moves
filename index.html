@@ -12,6 +12,25 @@
   <link rel="stylesheet" href="./css/index.css" />
   <script src="https://kit.fontawesome.com/f70731dcf2.js" crossorigin="anonymous"></script>
   <script src="./js/index.js"></script>
+  <script src="https://smtpjs.com/v3/smtp.js">
+  </script>
+
+  <script type="text/javascript">
+    function sendEmail() {
+      Email.send({
+        Host: "smtp.gmail.com",
+        Username: "adlm34846@gmail.com",
+        Password: "hes010ham@@#",
+        To: 'h456ad@gmail.com',
+        From: "adlm34846@gmail.com",
+        Subject: "Sending Email using javascript",
+        Body: "Well that was easy!!",
+      })
+        .then(function (message) {
+          alert("mail sent successfully")
+        });
+    }
+  </script>
 </head>
 
 <body>
@@ -185,13 +204,16 @@
 
 
 
-
+    <form method="post">
+      <input type="button" value="Send Email" onclick="sendEmail()" />
+    </form>
   </div>
+
   <div id="btn-f" class="di-btn center">
     <button class="btn-f" onclick="foot()"><i class="fas fa-caret-down" aria-hidden="true"></i></button>
   </div>
   <footer class="flex-column w-100 center align-items-start" id="footer">
-    <div class="container h-100">
+    <div class="container  h-100">
       <div class="w-100 center h-75">
         <ul>
           <li><a href="#">nnnnnnn</a></li>
@@ -221,7 +243,19 @@
           <li><a href="#">nnnnnnn</a></li>
         </ul>
       </div>
-      <div class="w-100 center h-25">by hesham ahmed</div>
+      <div class="w-100 creator center flex-column h-25">
+        by
+        <div>
+          <ul class="center">
+            <li><a href="https://www.facebook.com/heshamahmed17/"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://wa.me/qr/CWZ42NG6QPHMO1"><i class="fab fa-whatsapp"></i></a></li>
+            <li><a href=""><i class="fab fa-linkedin"></i></a></li>
+            <li><a href=""><i class="fab fa-github"></i></a></li>
+          </ul>
+        </div>
+        <span>Hesham Ahmed</span>
+
+      </div>
     </div>
   </footer>
 

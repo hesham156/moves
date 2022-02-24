@@ -12,6 +12,28 @@ ul {
 .di-btn {
   width: 75%;
 }
+.creator div ul {
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+  height: 0px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+.creator:hover div ul {
+  height: 27px;
+}
+.creator span {
+  font-family: cursive;
+  color: black;
+  font-size: 16px;
+}
+.creator div ul li {
+  margin: 0px 10px;
+}
+#footer div {
+  padding-bottom: 5px;
+}
 #footer {
   width: 75% !important;
   right: 0;
