@@ -25,7 +25,8 @@ ul {
 }
 .creator span {
   font-family: cursive;
-  color: black;
+  color: #f55555;
+  text-decoration: underline 2px aliceblue;
   font-size: 16px;
 }
 .creator div ul li {
