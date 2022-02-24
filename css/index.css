@@ -9,8 +9,12 @@ body {
 ul {
   list-style: none;
 }
-
+.di-btn {
+  width: 75%;
+}
 #footer {
+  width: 75% !important;
+  right: 0;
   transition: 0.3s;
   height: 0;
   box-shadow: 1px 1px 10px black;
@@ -23,12 +27,9 @@ ul {
 .ytp-title-channel-logo {
   display: none !important;
 }
-#btn-f {
-  position: fixed;
-  bottom: 0;
+.btn-f {
   border: 1px solid aliceblue;
   transition: 0.3s;
-  left: 50%;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -36,6 +37,14 @@ ul {
   color: aliceblue;
   transform: rotate(0deg);
   font-size: 30px;
+}
+.di-btn {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+  height: 50px;
+  transform: rotate(0deg);
 }
 
 .cardd {
@@ -452,5 +461,11 @@ main {
   #other,
   #menu {
     height: 238px !important;
+  }
+  #footer {
+    width: 100% !important;
+  }
+  .di-btn {
+    width: 100%;
   }
 }

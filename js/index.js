@@ -194,11 +194,11 @@ const sw = (idd ,ro) =>{
     var v = document.getElementById(idd);
     var r =document.getElementById(ro);
     if(v.style.height===''||v.style.height==='0px'){
-        v.style.height="238px";
+        v.style.height="250px";
         v.style.overflow='hidden'
         r.style.transform="rotate(-90deg)"
     }
-    else if(v.style.height='238px') {
+    else if(v.style.height='250px') {
       v.style.height='0px'
       r.style.transform = "rotate(0deg)"
 
