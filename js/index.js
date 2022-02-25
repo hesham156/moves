@@ -6,6 +6,7 @@ var data = [
         creators:'David Benioff - D.B. Weiss',
         stars:'Emilia Clarke - Peter Dinklage - Kit Harington',
         rate:'9.2',
+        video:'tWuPu3GL2jY'
     },
     {
         name:'La casa de papel',
@@ -13,7 +14,8 @@ var data = [
         describtion:'An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.',
         creators:'Álex Pina',
         stars:'Úrsula Corberó - Álvaro Morte - Itziar Ituño',
-        rate:'8.2'
+        rate:'8.2',
+        video:'AaLoOzI26YA',
     },
     {
         name:'Vikings',
@@ -21,7 +23,8 @@ var data = [
         describtion:'Vikings transports us to the brutal and mysterious world of Ragnar Lothbrok, a Viking warrior and farmer who yearns to explore - and raid - the distant shores across the ocean.',
         creators:'Michael Hirst',
         stars:'Katheryn Winnick - Gustaf Skarsgård - Alexander Ludwig',
-        rate:'8.5'
+        rate:'8.5',
+        video:'bRrK8h6R4hI'
     },
     {
         name:'Breaking Bad',
@@ -29,7 +32,8 @@ var data = [
         describtion:'A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family\'s future.',
         creators:'Vince Gilligan',
         stars:'Bryan Cranston - Aaron Paul - Anna Gunn',
-        rate:'9.4'
+        rate:'9.4',
+        video:'jj35CalTYeE'
     },
     {
         name:'Squid Game',
@@ -38,6 +42,7 @@ var data = [
         creators:'',
         stars:'Lee Jung-jae - Park Hae-soo - Masoud Sepahi',
         rate:'8.0',
+        video:'sH4Y450PSVM'
     },
     {
         name:'The Blacklist',
@@ -46,6 +51,7 @@ var data = [
         creators:'Jon Bokenkamp',
         stars:'James Spader - Megan Boone - Diego Klattenhoff',
         rate:'8.0',
+        video:'Ed4WezawtgM'
     },
     {
         name:'The Walking Dead',
@@ -54,6 +60,7 @@ var data = [
         creators:'Frank Darabont',
         stars:'Andrew Lincoln - Norman Reedus - Melissa McBride',
         rate:'8.1',
+        video:'sH4Y450PSVM'
     },
 ]
 var lim =document.getElementsByTagName('li');
@@ -106,6 +113,14 @@ m.scroll({
     left : left,
   behavior: 'smooth'
 })}
+const fco = ()=>{
+    const fo =document.getElementById('foot-con');
+for(let n = 0 ;n<data.length;n++){
+const li = document.createElement('li')
+li.onclick= ()=>{chbg(n)}
+li.innerHTML=`<a href="#Home"> ${data[n].name} </a>`
+fo.appendChild(li)}
+}
 const chbg = (i)=>{
         const bgimg = document.getElementById('bgimg');
         const info = document.getElementById('info');
@@ -142,10 +157,15 @@ for(let i =0;i<c.length;i++){
     c[i].style.backgroundImage="url('./img/"+i+".jpg')"
     c[i].setAttribute('onclick',`chbg(${i})`)
 }
-chan(0,8,'active')
-chan(11,17,'act')
 chbg(0)
 showdata()
+chan(0,8,'active')
+chan(11,17,'act')
+vi()
+fco()
+
+
+
 document.location.hash='Home'
 }
 const card = (i)=>{
@@ -194,7 +214,7 @@ const sw = (idd ,ro) =>{
     var v = document.getElementById(idd);
     var r =document.getElementById(ro);
     if(v.style.height===''||v.style.height==='0px'){
-        v.style.height="250px";
+        v.style.height=idd==='menu'?"170px":"250px";
         v.style.overflow='hidden'
         r.style.transform="rotate(-90deg)"
     }
@@ -221,4 +241,21 @@ const foot = ()=>{
         btn.style.transform="rotate(0deg)"
     }
 
+}
+const vi = ()=>{
+   const v = document.getElementById('vi')
+   for(let i = 0 ; i<data.length;i++){
+       const div = document.createElement('div')
+      const ifram = document.createElement('iframe')
+      div.classList.add('center')
+   ifram.src=`https://www.youtube.com/embed/${data[i].video}`
+   ifram.width='350'
+   ifram.height='400'
+   ifram.title="YouTube video player"
+   ifram.frameborder="0"
+   ifram.allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+   ifram.allowFullscreen=true
+   div.appendChild(ifram)
+   v.appendChild(div)
+   }
 }
